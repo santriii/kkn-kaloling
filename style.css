@@ -1,6 +1,12 @@
-/* ==========================
+/* ==========================================================
+   KKN TEMATIK DESA KALOLING
+   GLOBAL STYLE
+   ========================================================== */
+
+
+/* ===========================
    RESET
-========================== */
+=========================== */
 
 *{
     margin:0;
@@ -8,9 +14,30 @@
     box-sizing:border-box;
 }
 
-/* ==========================
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Manrope', sans-serif;
+
+    background:#F7F6F2;
+
+    color:#1F1F1F;
+
+    overflow-x:hidden;
+
+    line-height:1.8;
+
+}
+
+
+/* ===========================
    ROOT COLOR
-========================== */
+=========================== */
 
 :root{
 
@@ -24,39 +51,65 @@
 
     --dark:#1F1F1F;
 
+    --gray:#666666;
+
     --glass:rgba(255,255,255,.15);
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    --radius:18px;
 
 }
 
-/* ==========================
-   BODY
-========================== */
 
-body{
+/* ===========================
+   TYPOGRAPHY
+=========================== */
 
-    font-family:'Manrope',sans-serif;
+h1,h2,h3,h4,h5,h6{
 
-    background:var(--cream);
+    font-family:'Cormorant Garamond', serif;
+
+    font-weight:700;
 
     color:var(--dark);
 
-    overflow-x:hidden;
+}
+
+h1{
+
+    font-size:72px;
+
+    line-height:1.1;
 
 }
 
-/* ==========================
-   TITLE
-========================== */
+h2{
 
-h1,h2,h3,h4{
-
-    font-family:'Cormorant Garamond',serif;
+    font-size:54px;
 
 }
 
-/* ==========================
+h3{
+
+    font-size:38px;
+
+}
+
+p{
+
+    color:var(--gray);
+
+    font-size:17px;
+
+    font-weight:400;
+
+}
+
+
+/* ===========================
    IMAGE
-========================== */
+=========================== */
 
 img{
 
@@ -66,9 +119,10 @@ img{
 
 }
 
-/* ==========================
+
+/* ===========================
    LINK
-========================== */
+=========================== */
 
 a{
 
@@ -78,9 +132,21 @@ a{
 
 }
 
-/* ==========================
+
+/* ===========================
+   LIST
+=========================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+
+/* ===========================
    CONTAINER
-========================== */
+=========================== */
 
 .container{
 
@@ -93,76 +159,246 @@ a{
 }
 
 
-/* ==========================
-        NAVBAR
-========================== */
+/* ===========================
+   SECTION
+=========================== */
 
-.navbar{
+section{
 
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    padding:25px 0;
-
-    z-index:1000;
-
-    transition:.4s;
+    padding:110px 0;
 
 }
 
-.nav-container{
 
-    display:flex;
+/* ===========================
+   BUTTON
+=========================== */
 
-    justify-content:space-between;
+.btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:15px 38px;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+/* ===========================
+   GLASS CARD
+=========================== */
+
+.glass{
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    border-radius:var(--radius);
+
+}
+
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title span{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+}
+
+.section-title h2{
+
+    margin-top:10px;
+
+}
+
+.section-title p{
+
+    max-width:650px;
+
+    margin:20px auto 0;
+
+}
+
+
+/* ===========================
+   GRID
+=========================== */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
 
     align-items:center;
 
 }
 
-.logo{
+.grid-3{
 
-    font-family:'Cormorant Garamond', serif;
+    display:grid;
 
-    font-size:32px;
+    grid-template-columns:repeat(3,1fr);
 
-    font-weight:700;
+    gap:30px;
+
+}
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+/* ===========================
+   SPACING
+=========================== */
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.mb-30{
+
+    margin-bottom:30px;
+
+}
+
+.mb-40{
+
+    margin-bottom:40px;
+
+}
+
+.mt-30{
+
+    margin-top:30px;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#294332;
+
+}
+
+
+/* ===========================
+   SELECTION
+=========================== */
+
+::selection{
+
+    background:var(--primary);
 
     color:white;
-
-    letter-spacing:1px;
-
-}
-
-.nav-menu{
-
-    display:flex;
-
-    list-style:none;
-
-    gap:35px;
-
-}
-
-.nav-menu a{
-
-    color:white;
-
-    font-size:15px;
-
-    font-weight:500;
-
-    transition:.3s;
-
-}
-
-.nav-menu a:hover{
-
-    opacity:.7;
 
 }
