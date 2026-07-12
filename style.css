@@ -1,0 +1,93 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+   ROOT COLOR
+========================== */
+
+:root{
+
+    --primary:#3E5F44;
+
+    --secondary:#88A88B;
+
+    --cream:#F7F6F2;
+
+    --white:#ffffff;
+
+    --dark:#1F1F1F;
+
+    --glass:rgba(255,255,255,.15);
+
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+
+    font-family:'Manrope',sans-serif;
+
+    background:var(--cream);
+
+    color:var(--dark);
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+h1,h2,h3,h4{
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+/* ==========================
+   LINK
+========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
