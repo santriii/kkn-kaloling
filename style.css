@@ -1,12 +1,13 @@
-/* ==========================================================
+/* ===========================================================
    KKN TEMATIK DESA KALOLING
-   GLOBAL STYLE
-   ========================================================== */
+   GLOBAL STYLES
+   Universitas Hasanuddin
+=========================================================== */
 
 
-/* ===========================
+/* ===========================================================
    RESET
-=========================== */
+=========================================================== */
 
 *{
     margin:0;
@@ -15,18 +16,16 @@
 }
 
 html{
-
     scroll-behavior:smooth;
-
 }
 
 body{
 
-    font-family:'Manrope', sans-serif;
+    font-family:'Manrope',sans-serif;
 
     background:#F7F6F2;
 
-    color:#1F1F1F;
+    color:#222;
 
     overflow-x:hidden;
 
@@ -35,44 +34,50 @@ body{
 }
 
 
-/* ===========================
+/* ===========================================================
    ROOT COLOR
-=========================== */
+=========================================================== */
 
 :root{
 
-    --primary:#3E5F44;
+    --primary:#355E3B;
 
-    --secondary:#88A88B;
+    --secondary:#6D8B74;
+
+    --accent:#A3B18A;
 
     --cream:#F7F6F2;
 
     --white:#ffffff;
 
-    --dark:#1F1F1F;
+    --black:#222222;
 
     --gray:#666666;
 
-    --glass:rgba(255,255,255,.15);
+    --border:#E7E7E7;
 
-    --shadow:0 10px 30px rgba(0,0,0,.08);
+    --glass:rgba(255,255,255,.18);
+
+    --shadow:0 15px 35px rgba(0,0,0,.08);
 
     --radius:18px;
+
+    --transition:.35s ease;
 
 }
 
 
-/* ===========================
+/* ===========================================================
    TYPOGRAPHY
-=========================== */
+=========================================================== */
 
 h1,h2,h3,h4,h5,h6{
 
-    font-family:'Cormorant Garamond', serif;
+    font-family:'Cormorant Garamond',serif;
 
     font-weight:700;
 
-    color:var(--dark);
+    color:var(--black);
 
 }
 
@@ -80,7 +85,7 @@ h1{
 
     font-size:72px;
 
-    line-height:1.1;
+    line-height:1.05;
 
 }
 
@@ -88,11 +93,19 @@ h2{
 
     font-size:54px;
 
+    line-height:1.2;
+
 }
 
 h3{
 
-    font-size:38px;
+    font-size:34px;
+
+}
+
+h4{
+
+    font-size:24px;
 
 }
 
@@ -102,27 +115,18 @@ p{
 
     font-size:17px;
 
-    font-weight:400;
+}
+
+span{
+
+    display:inline-block;
 
 }
 
 
-/* ===========================
-   IMAGE
-=========================== */
-
-img{
-
-    width:100%;
-
-    display:block;
-
-}
-
-
-/* ===========================
+/* ===========================================================
    LINK
-=========================== */
+=========================================================== */
 
 a{
 
@@ -130,12 +134,27 @@ a{
 
     color:inherit;
 
+    transition:var(--transition);
+
 }
 
 
-/* ===========================
+/* ===========================================================
+   IMAGE
+=========================================================== */
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+
+/* ===========================================================
    LIST
-=========================== */
+=========================================================== */
 
 ul{
 
@@ -144,9 +163,9 @@ ul{
 }
 
 
-/* ===========================
+/* ===========================================================
    CONTAINER
-=========================== */
+=========================================================== */
 
 .container{
 
@@ -159,72 +178,22 @@ ul{
 }
 
 
-/* ===========================
+/* ===========================================================
    SECTION
-=========================== */
+=========================================================== */
 
 section{
 
     padding:110px 0;
 
-}
-
-
-/* ===========================
-   BUTTON
-=========================== */
-
-.btn{
-
-    display:inline-block;
-
-    margin-top:30px;
-
-    padding:15px 38px;
-
-    border-radius:999px;
-
-    background:var(--primary);
-
-    color:white;
-
-    font-weight:600;
-
-    transition:.35s;
-
-}
-
-.btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    position:relative;
 
 }
 
 
-/* ===========================
-   GLASS CARD
-=========================== */
-
-.glass{
-
-    background:rgba(255,255,255,.18);
-
-    backdrop-filter:blur(15px);
-
-    -webkit-backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,.3);
-
-    border-radius:var(--radius);
-
-}
-
-
-/* ===========================
+/* ===========================================================
    SECTION TITLE
-=========================== */
+=========================================================== */
 
 .section-title{
 
@@ -238,19 +207,19 @@ section{
 
     color:var(--primary);
 
-    font-weight:700;
+    font-size:14px;
+
+    letter-spacing:4px;
 
     text-transform:uppercase;
 
-    letter-spacing:3px;
-
-    font-size:14px;
+    font-weight:700;
 
 }
 
 .section-title h2{
 
-    margin-top:10px;
+    margin-top:12px;
 
 }
 
@@ -263,15 +232,88 @@ section{
 }
 
 
-/* ===========================
+/* ===========================================================
+   BUTTON
+=========================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 38px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 25px rgba(0,0,0,.15);
+
+}
+
+
+/* ===========================================================
+   CARD
+=========================================================== */
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* ===========================================================
+   GLASS
+=========================================================== */
+
+.glass{
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+
+/* ===========================================================
    GRID
-=========================== */
+=========================================================== */
 
 .grid-2{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
 
     gap:60px;
 
@@ -300,44 +342,31 @@ section{
 }
 
 
-/* ===========================
-   CARD
-=========================== */
-
-.card{
-
-    background:white;
-
-    border-radius:20px;
-
-    padding:30px;
-
-    box-shadow:var(--shadow);
-
-    transition:.35s;
-
-}
-
-.card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-
-/* ===========================
+/* ===========================================================
    SPACING
-=========================== */
+=========================================================== */
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mt-40{
+
+    margin-top:40px;
+
+}
+
+.mt-60{
+
+    margin-top:60px;
+
+}
 
 .mb-20{
 
     margin-bottom:20px;
-
-}
-
-.mb-30{
-
-    margin-bottom:30px;
 
 }
 
@@ -347,9 +376,9 @@ section{
 
 }
 
-.mt-30{
+.mb-60{
 
-    margin-top:30px;
+    margin-bottom:60px;
 
 }
 
@@ -360,9 +389,40 @@ section{
 }
 
 
-/* ===========================
+/* ===========================================================
+   ANIMATION
+=========================================================== */
+
+.fade-up{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ===========================================================
    SCROLLBAR
-=========================== */
+=========================================================== */
 
 ::-webkit-scrollbar{
 
@@ -372,7 +432,7 @@ section{
 
 ::-webkit-scrollbar-track{
 
-    background:#ececec;
+    background:#ECECEC;
 
 }
 
@@ -380,25 +440,69 @@ section{
 
     background:var(--primary);
 
-    border-radius:20px;
+    border-radius:30px;
 
 }
 
 ::-webkit-scrollbar-thumb:hover{
 
-    background:#294332;
+    background:#294D2F;
 
 }
 
 
-/* ===========================
-   SELECTION
-=========================== */
+/* ===========================================================
+   TEXT SELECTION
+=========================================================== */
 
 ::selection{
 
     background:var(--primary);
 
     color:white;
+
+}
+
+
+/* ===========================================================
+   INPUT
+=========================================================== */
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    font-family:'Manrope',sans-serif;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:var(--transition);
+
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:var(--primary);
+
+}
+
+
+/* ===========================================================
+   PLACEHOLDER
+=========================================================== */
+
+::placeholder{
+
+    color:#999;
 
 }
