@@ -1,0 +1,234 @@
+/* ===========================================================
+   PROGRAMS SECTION
+=========================================================== */
+
+#programs{
+
+    background:#ffffff;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* ===========================================================
+   GRID
+=========================================================== */
+
+.program-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+
+/* ===========================================================
+   CARD
+=========================================================== */
+
+.program-card{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+    transition:.4s ease;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/* ===========================================================
+   IMAGE
+=========================================================== */
+
+.program-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    transition:.5s ease;
+
+}
+
+
+/* ===========================================================
+   CONTENT
+=========================================================== */
+
+.program-content{
+
+    padding:30px;
+
+    flex:1;
+
+}
+
+.program-content span{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:rgba(53,94,59,.08);
+
+    color:var(--primary);
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.program-content h3{
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+    line-height:1.25;
+
+}
+
+.program-content p{
+
+    font-size:16px;
+
+    color:var(--gray);
+
+    text-align:justify;
+
+}
+
+
+/* ===========================================================
+   HOVER EFFECT
+=========================================================== */
+
+.program-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
+
+}
+
+.program-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.program-card:hover span{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+}
+
+
+/* ===========================================================
+   BORDER ACCENT
+=========================================================== */
+
+.program-card::after{
+
+    content:"";
+
+    display:block;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+
+        to right,
+
+        var(--primary),
+
+        var(--accent)
+
+    );
+
+}
+
+
+/* ===========================================================
+   RESPONSIVE TABLET
+=========================================================== */
+
+@media(max-width:992px){
+
+    .program-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/* ===========================================================
+   RESPONSIVE MOBILE
+=========================================================== */
+
+@media(max-width:768px){
+
+    .program-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .program-card img{
+
+        height:220px;
+
+    }
+
+}
+
+
+/* ===========================================================
+   SMALL MOBILE
+=========================================================== */
+
+@media(max-width:576px){
+
+    .program-content{
+
+        padding:24px;
+
+    }
+
+    .program-content h3{
+
+        font-size:24px;
+
+    }
+
+}
