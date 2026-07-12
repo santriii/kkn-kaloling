@@ -1,0 +1,264 @@
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:25px 0;
+
+    z-index:9999;
+
+    transition:.4s ease;
+
+}
+
+/* ===========================
+   SCROLL EFFECT
+=========================== */
+
+.navbar.scrolled{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    padding:18px 0;
+
+}
+
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.nav-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:1;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.logo span{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+.logo small{
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    margin-top:6px;
+
+    text-transform:uppercase;
+
+}
+
+
+/* ===========================
+   MENU
+=========================== */
+
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:38px;
+
+}
+
+
+/* ===========================
+   MENU LINK
+=========================== */
+
+.nav-menu li a{
+
+    position:relative;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+/* ===========================
+   UNDERLINE EFFECT
+=========================== */
+
+.nav-menu li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+.nav-menu li a:hover::after{
+
+    width:100%;
+
+}
+
+.nav-menu li a:hover{
+
+    opacity:.85;
+
+}
+
+
+/* ===========================
+   SAAT DISCROLL
+=========================== */
+
+.navbar.scrolled .logo{
+
+    color:var(--primary);
+
+}
+
+.navbar.scrolled .nav-menu li a{
+
+    color:var(--dark);
+
+}
+
+.navbar.scrolled .nav-menu li a::after{
+
+    background:var(--primary);
+
+}
+
+
+/* ===========================
+   HAMBURGER
+=========================== */
+
+.menu-toggle{
+
+    display:none;
+
+    flex-direction:column;
+
+    cursor:pointer;
+
+    gap:5px;
+
+}
+
+.menu-toggle span{
+
+    width:28px;
+
+    height:3px;
+
+    background:white;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.navbar.scrolled .menu-toggle span{
+
+    background:var(--primary);
+
+}
+
+
+/* ===========================
+   ACTIVE LINK
+=========================== */
+
+.nav-menu li a.active{
+
+    color:#ffffff;
+
+    font-weight:700;
+
+}
+
+.navbar.scrolled .nav-menu li a.active{
+
+    color:var(--primary);
+
+}
+
+
+/* ===========================
+   HOVER LOGO
+=========================== */
+
+.logo:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.9;
+
+}
