@@ -1,10 +1,6 @@
-/* ==========================================================
+/* ===========================================================
    NAVBAR
-========================================================== */
-
-/* ===========================
-   NAVBAR
-=========================== */
+=========================================================== */
 
 .navbar{
 
@@ -16,21 +12,17 @@
 
     width:100%;
 
-    padding:25px 0;
+    z-index:999;
 
-    z-index:9999;
+    padding:20px 0;
 
     transition:.4s ease;
 
 }
 
-/* ===========================
-   SCROLL EFFECT
-=========================== */
-
 .navbar.scrolled{
 
-    background:rgba(255,255,255,.75);
+    background:rgba(255,255,255,.88);
 
     backdrop-filter:blur(18px);
 
@@ -38,14 +30,14 @@
 
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 
-    padding:18px 0;
+    padding:15px 0;
 
 }
 
 
-/* ===========================
+/* ===========================================================
    CONTAINER
-=========================== */
+=========================================================== */
 
 .nav-container{
 
@@ -58,52 +50,68 @@
 }
 
 
-/* ===========================
+/* ===========================================================
    LOGO
-=========================== */
+=========================================================== */
 
 .logo{
 
     display:flex;
 
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.logo img{
+
+    width:55px;
+
+    height:55px;
+
+    object-fit:contain;
+
+}
+
+.logo-text{
+
+    display:flex;
+
     flex-direction:column;
 
-    line-height:1;
+}
+
+.logo-text h3{
+
+    font-size:22px;
 
     color:white;
+
+    line-height:1;
 
     transition:.3s;
 
 }
 
-.logo span{
+.logo-text span{
 
-    font-family:'Cormorant Garamond', serif;
+    font-size:12px;
 
-    font-size:34px;
-
-    font-weight:700;
+    color:white;
 
     letter-spacing:2px;
 
-}
+    margin-top:5px;
 
-.logo small{
-
-    font-size:11px;
-
-    letter-spacing:4px;
-
-    margin-top:6px;
-
-    text-transform:uppercase;
+    transition:.3s;
 
 }
 
 
-/* ===========================
+/* ===========================================================
    MENU
-=========================== */
+=========================================================== */
 
 .nav-menu{
 
@@ -115,14 +123,13 @@
 
 }
 
-
-/* ===========================
-   MENU LINK
-=========================== */
-
-.nav-menu li a{
+.nav-menu li{
 
     position:relative;
+
+}
+
+.nav-menu a{
 
     color:white;
 
@@ -130,16 +137,18 @@
 
     font-weight:600;
 
+    letter-spacing:.5px;
+
     transition:.3s;
 
 }
 
 
-/* ===========================
-   UNDERLINE EFFECT
-=========================== */
+/* ===========================================================
+   UNDERLINE
+=========================================================== */
 
-.nav-menu li a::after{
+.nav-menu a::after{
 
     content:"";
 
@@ -155,49 +164,55 @@
 
     background:white;
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
-.nav-menu li a:hover::after{
+.nav-menu a:hover::after{
 
     width:100%;
 
 }
 
-.nav-menu li a:hover{
+.nav-menu a:hover{
 
     opacity:.85;
 
 }
 
 
-/* ===========================
-   SAAT DISCROLL
-=========================== */
+/* ===========================================================
+   SCROLLED COLOR
+=========================================================== */
 
-.navbar.scrolled .logo{
+.navbar.scrolled .logo-text h3{
 
     color:var(--primary);
 
 }
 
-.navbar.scrolled .nav-menu li a{
+.navbar.scrolled .logo-text span{
 
-    color:var(--dark);
+    color:var(--gray);
 
 }
 
-.navbar.scrolled .nav-menu li a::after{
+.navbar.scrolled .nav-menu a{
+
+    color:var(--black);
+
+}
+
+.navbar.scrolled .nav-menu a::after{
 
     background:var(--primary);
 
 }
 
 
-/* ===========================
-   HAMBURGER
-=========================== */
+/* ===========================================================
+   MOBILE BUTTON
+=========================================================== */
 
 .menu-toggle{
 
@@ -205,9 +220,9 @@
 
     flex-direction:column;
 
-    cursor:pointer;
+    gap:6px;
 
-    gap:5px;
+    cursor:pointer;
 
 }
 
@@ -219,9 +234,9 @@
 
     background:white;
 
-    border-radius:10px;
+    border-radius:50px;
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
@@ -232,33 +247,142 @@
 }
 
 
-/* ===========================
+/* ===========================================================
    ACTIVE LINK
-=========================== */
+=========================================================== */
 
-.nav-menu li a.active{
+.nav-menu a.active{
 
     color:#ffffff;
 
-    font-weight:700;
-
 }
 
-.navbar.scrolled .nav-menu li a.active{
+.navbar.scrolled .nav-menu a.active{
 
     color:var(--primary);
 
 }
 
 
-/* ===========================
+/* ===========================================================
    HOVER LOGO
-=========================== */
+=========================================================== */
 
 .logo:hover{
 
     transform:translateY(-2px);
 
-    opacity:.9;
+}
+
+
+/* ===========================================================
+   DESKTOP
+=========================================================== */
+
+@media(min-width:992px){
+
+    .nav-menu{
+
+        display:flex;
+
+    }
+
+}
+
+
+/* ===========================================================
+   TABLET
+=========================================================== */
+
+@media(max-width:991px){
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+    .nav-menu{
+
+        position:absolute;
+
+        top:100%;
+
+        right:5%;
+
+        width:260px;
+
+        background:white;
+
+        border-radius:18px;
+
+        box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:20px;
+
+        gap:20px;
+
+    }
+
+    .nav-menu.active{
+
+        display:flex;
+
+    }
+
+    .nav-menu a{
+
+        color:var(--black);
+
+        width:100%;
+
+    }
+
+    .nav-menu a::after{
+
+        background:var(--primary);
+
+    }
+
+    .logo-text h3{
+
+        font-size:20px;
+
+    }
+
+}
+
+
+/* ===========================================================
+   MOBILE
+=========================================================== */
+
+@media(max-width:576px){
+
+    .logo img{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .logo-text h3{
+
+        font-size:18px;
+
+    }
+
+    .logo-text span{
+
+        font-size:10px;
+
+    }
 
 }
